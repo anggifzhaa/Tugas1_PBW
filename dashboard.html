@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - SITTA UT</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar -->
+    <nav class="sidebar">
+      <div class="sidebar-header">
+        <img src="assets/logo_ut_putih.jpg" height="100px" width="125px" alt="Logo UT">
+      </div>
+      <ul>
+        <li><a href="dashboard.html" class="active">Dashboard</a></li>
+        <li><a href="stok.html">Informasi Bahan Ajar</a></li>
+        <li><a href="tracking.html">Tracking Pengiriman</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">Laporan</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Monitoring Progress DO</a></li>
+            <li><a href="#">Rekap Bahan Ajar</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Histori Transaksi Bahan Ajar</a></li>
+      </ul>
+      <div class="sidebar-footer">
+        <a href="index.html" class="btn btn-logout">Log Out</a>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <h1 id="greeting">Selamat Datang di SITTA UT</h1>
+      <p>Sistem Informasi Tracking dan Transaksi Bahan Ajar Universitas Terbuka</p>
+    </main>
+  </div>
+  <script src="js/data.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

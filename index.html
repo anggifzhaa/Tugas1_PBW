@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login Pemesanan Bahan Ajar UT</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://kit.fontawesome.com/2fa1302ba9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="forms">
+      <div class="form login">
+        <div class="logo-container">
+          <img src="assets/logo_ut.jpg" alt="Logo Universitas Terbuka" class="logo">
+        </div>
+        <span class="title">Selamat Datang</span>
+
+        <form action="#">
+          <div class="input-field">
+            <i class="fa-solid fa-envelope icon"></i>
+            <input type="text" placeholder="Email" required />
+          </div>
+          <div class="input-field">
+            <i class="fa-solid fa-key icon"></i>
+            <input type="password" class="password" placeholder="Password" required />
+            <i class="fa-solid fa-eye-slash showHidePw"></i>
+          </div>
+
+          <div class="checkbox-text">
+            <div class="checkbox-content">
+              <input type="checkbox" id="logCheck" />
+              <label for="logCheck" class="text">Ingat saya</label>
+            </div>
+            <a href="#" class="text">Lupa password?</a>
+          </div>
+
+          <div class="input-field button">
+            <input type="button" id="myBtn" value="Masuk" />
+          </div>
+
+          <div id="myModal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <p>Email/Password yang anda masukkan salah!</p>
+            </div>
+          </div>
+        </form>
+
+        <div class="login-signup">
+          <span class="text">
+            <a href="#" class="text signup-text">Belum punya akun?</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+  <script src="js/data.js"></script>
+</body>
+</html>

@@ -1,0 +1,560 @@
+/* ============ LAYOUT UMUM ============ */
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  background-color: #f4f6f9;
+  color: #333;
+}
+
+/* ============ LOGIN PAGE ============ */
+.container{
+position: relative;
+max-width: 550px;
+width: 960px;
+top: 50%;
+-ms-transform: translateY(-50%);
+transform: translateY(10%);
+margin: 0 auto;
+background: #fff;
+box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+.container .forms{
+display: absolute;
+align-items: center;
+width: 100%;
+background-color: #fff;
+}
+
+.container .form{
+padding: 50px;
+}
+
+.container .form .logo-container{
+  text-align: center;
+  margin-bottom: 10px;
+}
+.logo-container .logo{
+  width: 80px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.container .form .title{
+  display: block;
+  text-align: center;
+  font-size: 27px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.form .title::before{
+content: '';
+position: absolute;
+left: 0;
+bottom: 0;
+height: 3px;
+width: 30px;
+background-color: #fff;
+border-radius: 25px;
+}
+
+.form .input-field{
+display: flex;
+align-items: center;
+border-bottom: 2px solid #ccc;
+margin-top: 30px;
+}
+
+.input-field input{
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 16px;
+  padding: 10px;
+}
+
+.input-field input:is(:focus, :valid){
+  border-bottom-color: #4070f4;
+}
+
+.input-field i{
+  margin-right: 10px;
+  color: #999;
+  font-size: 18px;
+}
+
+.input-field input:is(:focus, :valid) ~ i{
+color: #4070f4;
+}
+
+.input-field i.icon{
+left: 10px;
+color: #999
+}
+
+.input-field i.showHidePw{
+right: 0;
+cursor: pointer;
+padding: 0px;
+}
+
+.form .checkbox-text{
+display: flex;
+justify-content: space-between;
+margin-top: 20px;
+}
+
+.checkbox-text .checkbox-content{
+display: flex;
+align-items: center;
+}
+
+.checkbox-content input{
+margin: 0 8px -2px 4px;
+accent-color: #4070f4;
+}
+
+.form a{
+text-decoration: none;
+}
+
+.form a:hover{
+text-decoration: underline;
+}
+
+.form .button input{
+border: none;
+color: black;
+width: 450px;
+font-size: 17px;
+font-weight: 500;
+letter-spacing: 1px;
+border-radius: 12px;
+background-color: orange;
+cursor: pointer;
+}
+
+.form .button input:hover{
+background-color: orange;
+}
+
+.form .login-signup{
+margin-top: 30px;
+text-align: center;
+}
+
+/* Popup modal */
+.modal {
+display: none;
+position: fixed;
+z-index: 9999;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+overflow: auto;
+background-color: rgba(0,0,0,0.5);
+backdrop-filter: blur(2px);
+justify-content: center;
+align-items: center;
+}
+
+.modal-content {
+background-color: #fff;
+margin: 15% auto;
+padding: 20px;
+border-radius: 10px;
+width: 300px;
+text-align: center;
+}
+
+.close {
+color: #aaa;
+position: absolute;
+top: 10px;
+right: 15px;
+font-size: 25px;
+font-weight: bold;
+cursor: pointer;
+}
+
+.close:hover {
+color: #000;
+}
+
+
+/* ============ DASHBOARD ============ */
+.app-container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 240px;
+  background-color: #002b5c;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebar-header {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  position: relative;
+}
+
+.sidebar ul li a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 12px 20px;
+  transition: 0.3s;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
+  background-color: #004999;
+}
+
+/* ===== Dropdown ===== */
+.dropdown-menu {
+  display: none;
+  background-color: #003a7a;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown.open .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li a {
+  padding: 10px 30px;
+  font-size: 0.9rem;
+  display: block;
+}
+
+.sidebar-footer {
+  text-align: center;
+  padding: 15px;
+}
+
+.btn-logout {
+  background-color: #e63946;
+  padding: 10px 20px;
+  border-radius: 6px;
+  color: white;
+  text-decoration: none;
+}
+
+.main-content {
+  flex: 1;
+  padding: 30px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+  color: #002b5c;
+}
+
+/* ============ TRACKING ============ */
+.tracking-search {
+  margin: 20px 0;
+  display: flex;
+  gap: 10px;
+}
+
+.tracking-search input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.tracking-search button {
+  padding: 10px 20px;
+  background-color: #004999;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.tracking-search button:hover {
+  background-color: #0066cc;
+}
+
+.hasil-tracking {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin-top: 20px;
+}
+
+.tracking-result h3 {
+  margin-top: 0;
+  color: #002b5c;
+}
+
+.msg-error {
+  color: red;
+  font-weight: bold;
+}
+
+.progress-container {
+  margin-top: 15px;
+}
+
+.progress-bar {
+  width: 100%;
+  background-color: #eee;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 25px;
+  margin-bottom: 10px;
+}
+
+.progress-fill {
+  height: 100%;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  background-color: #004999;
+  transition: width 0.6s ease;
+}
+
+.perjalanan-list {
+  margin-top: 20px;
+  padding-left: 15px;
+}
+
+.perjalanan-item {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-left: 4px solid #004999;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+}
+
+.perjalanan-item strong {
+  color: #002b5c;
+}
+
+/* ============ STOK CARD ============ */
+.stok-card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.stok-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stok-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.stok-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.stok-card .card-content {
+  padding: 15px;
+}
+
+.stok-card h3 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 0.8rem;
+  color: #002b5c;
+  margin-bottom: 8px;
+}
+
+.stok-card p {
+  margin: 4px 0;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.stok-card p.stok {
+  background-color: #0039a6;
+  color: white;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 6px;
+  display: inline-block;
+  margin-top: 8px;
+}
+
+/* ===== DETAIL POPUP ===== */
+.detail-popup {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  animation: fadeIn 0.3s ease;
+}
+
+.detail-content {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  position: relative;
+}
+
+.detail-content img {
+  width: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.detail-content h2 {
+  margin-bottom: 10px;
+  color: #002b5c;
+}
+
+.detail-content p {
+  text-align: left;
+  margin: 6px 0;
+  color: #333;
+}
+
+.close-detail {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #444;
+  cursor: pointer;
+}
+
+.close-detail:hover {
+  color: red;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ============ BUTTON TAMBAH ============ */
+.btn-tambah {
+  background-color: #004999;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-left: 5px;
+  margin-bottom: 15px;
+  transition: 0.3s;
+}
+
+.btn-tambah:hover {
+  background-color: #0066cc;
+}
+
+/* ============ POPUP FORM ============ */
+.popup-form {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.popup-content {
+  background: white;
+  padding: 20px 25px;
+  border-radius: 10px;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+}
+
+.popup-content h3 {
+  margin-bottom: 15px;
+  color: #002b5c;
+  text-align: center;
+}
+
+.popup-content label {
+  margin-top: 8px;
+  font-size: 0.9rem;
+}
+
+.popup-content input {
+  padding: 6px;
+  margin-top: 3px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.popup-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.popup-buttons button {
+  flex: 1;
+  margin: 5px;
+  padding: 8px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+#btnSimpan {
+  background-color: #004999;
+  color: white;
+}
+
+#btnBatal {
+  background-color: #e63946;
+  color: white;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .stok-card-container {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
+}
